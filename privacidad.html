@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Política de Privacidad | CryptoBolívar</title>
+    <link rel="stylesheet" href="crypto-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+</head>
+<body>
+
+<header class="main-header">
+    <a href="index.html">
+        <img src="assets/img/logo-crypto.svg" alt="CryptoBolívar" class="logo-img">
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<script src="menu.js"></script>
+
+<main class="main-container">
+    <div class="info-card">
+        <h1>🔐 Política de Privacidad</h1>
+        <p>En CryptoBolívar, la privacidad de nuestros visitantes es importante. Esta política explica qué datos recopilamos y cómo los usamos.</p>
+        <h2>1. Datos que recopilamos</h2>
+        <ul><li><strong>Correo electrónico:</strong> Si nos escribes a través del formulario de contacto (cuando esté disponible).</li><li><strong>Datos de navegación:</strong> Dirección IP, tipo de navegador, páginas visitadas (si usamos herramientas de analítica como Google Analytics).</li><li><strong>Cookies:</strong> Pequeños archivos que mejoran la experiencia de usuario y permiten analizar el tráfico.</li></ul>
+        <h2>2. Cómo usamos tus datos</h2>
+        <ul><li>Para responder tus consultas.</li><li>Para mejorar el contenido y la experiencia del portal.</li><li>Para proteger el sitio de abusos o ataques.</li></ul>
+        <p>No vendemos ni compartimos tus datos con terceros, salvo obligación legal.</p>
+        <h2>2.1 Plazo de retención y datos sensibles</h2>
+        <p>Conservamos tus datos mientras sean necesarios para responder tu consulta o por obligación legal. Los correos se eliminan periódicamente una vez resuelta la comunicación.</p>
+        <p><strong>No incluyas en tus mensajes claves privadas, contraseñas de billeteras ni información bancaria.</strong> Si lo haces, el mensaje será eliminado sin respuesta, de acuerdo con nuestra política de seguridad.</p>
+        <h2>3. Cookies y consentimiento</h2>
+        <p>Este sitio utiliza cookies técnicas (necesarias para el funcionamiento) y de análisis (para medir el tráfico). Puedes aceptarlas, rechazarlas o configurarlas desde las opciones de tu navegador. Si bloqueas las cookies, algunas funciones del portal podrían verse afectadas.</p>
+        <p>Puedes gestionar las cookies desde la configuración de tu navegador. Más información en nuestra <a href="cookies.html">Política de Cookies</a> (próximamente).</p>
+        <h2>4. Transferencia internacional de datos</h2>
+        <p>Si utilizamos servicios como Google Forms, Gmail o Google Analytics, tus datos pueden ser transferidos a servidores ubicados fuera de Venezuela. Al usar este sitio, consientes implícitamente dicha transferencia.</p>
+        <h2>5. Derechos ARCO (LOPDP)</h2>
+        <p>Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación y Oposición escribiendo a <strong>cryptobolivarve@gmail.com</strong>.</p>
+        <h2>6. Seguridad</h2>
+        <p>No almacenamos claves privadas, contraseñas de billeteras ni información bancaria sensible. Tus datos de navegación se tratan con medidas de seguridad estándar.</p>
+        <p><strong>Última actualización:</strong> Abril 2026</p>
+        <p style="margin-top: 20px;">Consulta también nuestro <a href="aviso-legal.html">Aviso Legal</a> para más información sobre el uso del portal.</p>
+        <a href="index.html" class="btn" style="margin-top: 20px;">← Volver al Inicio</a>
+    </div>
+</main>
+
+<script src="footer.js"></script>
+<script>
+    (function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            if (!btn || !sidebar || !overlay) return;
+            function openMenu() {
+                sidebar.style.right = '0px';
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                sidebar.style.right = '-280px';
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            btn.addEventListener('click', openMenu);
+            overlay.addEventListener('click', closeMenu);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && sidebar.style.right === '0px') closeMenu();
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && sidebar.style.right === '0px') closeMenu();
+            });
+        });
+    })();
+</script>
+</body>
+</html>

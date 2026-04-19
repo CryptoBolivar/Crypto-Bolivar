@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Preguntas Frecuentes | CryptoBolívar</title>
+    <link rel="stylesheet" href="crypto-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+</head>
+<body>
+
+<header class="main-header">
+    <a href="index.html">
+        <img src="assets/img/logo-crypto.svg" alt="CryptoBolívar" class="logo-img">
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<script src="menu.js"></script>
+
+<main class="main-container">
+    <div class="info-card">
+        <h1>❓ Preguntas Frecuentes</h1>
+        <div style="margin-bottom: 30px;"><h3>¿CryptoBolívar es un exchange o una billetera?</h3><p>No. Somos un portal educativo. Te explicamos cómo usar plataformas como Binance de forma segura, pero no vendemos ni custodiamos criptomonedas.</p></div>
+        <div style="margin-bottom: 30px;"><h3>¿Puedo comprar USDT directamente aquí?</h3><p>No. Nosotros no realizamos operaciones de compra/venta. Te enseñamos a hacerlo por tu cuenta en Binance P2P.</p></div>
+        <div style="margin-bottom: 30px;"><h3>¿Qué pasa si pierdo mi clave privada (seed phrase)?</h3><p>Pierdes tu dinero para siempre. No hay "olvidé mi contraseña". Por eso insistimos en que la guardes en papel y en un lugar seguro.</p></div>
+        <div style="margin-bottom: 30px;"><h3>¿Es seguro usar P2P en Venezuela?</h3><p>Sí, si sigues las reglas: verifica el pago en tu cuenta bancaria antes de liberar los USDT, y compra/vende solo con usuarios de alta reputación.</p></div>
+        <div style="margin-bottom: 30px;"><h3>¿Necesito declarar mis criptomonedas al SENIAT?</h3><p>No podemos darte asesoría fiscal. Te recomendamos consultar con un contador especializado en criptoactivos.</p></div>
+        <div style="margin-bottom: 30px;"><h3>¿CryptoBolívar tiene una aplicación móvil?</h3><p>Por ahora solo operamos como portal web. El diseño es responsivo y funciona bien en móviles.</p></div>
+        <div style="margin-bottom: 30px;"><h3>¿CryptoBolívar muestra anuncios?</h3><p>Sí, utilizamos publicidad para mantener el portal gratuito. Los anuncios son proporcionados por servicios externos y no afectan la experiencia de lectura de las guías.</p></div>
+        <div style="margin-bottom: 30px;"><h3>¿Cómo reporto una estafa o un error en la guía?</h3><p>Escríbenos a <strong>cryptobolivarve@gmail.com</strong> con el asunto "Reporte" o "Corrección".</p></div>
+        <p style="margin-top: 30px; font-size:0.85rem;">Para más información, consulta nuestro <a href="aviso-legal.html">Aviso Legal</a> y nuestra <a href="privacidad.html">Política de Privacidad</a>.</p>
+        <a href="index.html" class="btn" style="margin-top: 20px;">← Volver al Inicio</a>
+    </div>
+</main>
+
+<script src="footer.js"></script>
+<script>
+    (function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            if (!btn || !sidebar || !overlay) return;
+            function openMenu() {
+                sidebar.style.right = '0px';
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                sidebar.style.right = '-280px';
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            btn.addEventListener('click', openMenu);
+            overlay.addEventListener('click', closeMenu);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && sidebar.style.right === '0px') closeMenu();
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && sidebar.style.right === '0px') closeMenu();
+            });
+        });
+    })();
+</script>
+</body>
+</html>

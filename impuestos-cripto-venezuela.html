@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Impuestos sobre criptomonedas en Venezuela: lo que debes saber para declarar tus tenencias en USDT, Bitcoin y otras criptos. Recomendaciones y disclaimer fiscal.">
+    <title>Impuestos cripto Venezuela | CryptoBolívar</title>
+    <link rel="stylesheet" href="crypto-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+</head>
+<body>
+
+<header class="main-header">
+    <a href="index.html">
+        <img src="assets/img/logo-crypto.svg" alt="CryptoBolívar" class="logo-img">
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<script src="menu.js"></script>
+
+<main class="main-container">
+    <div class="info-card">
+        <h1>📑 Impuestos sobre criptomonedas en Venezuela (lo que debes saber)</h1>
+        <p>La declaración de criptoactivos en Venezuela es un tema en evolución. Si bien aún no existe una regulación específica que grave las ganancias por criptomonedas, el SENIAT ha emitido directrices sobre la obligación de declarar las tenencias. En esta guía te explicamos el panorama actual y te damos recomendaciones prácticas para mantenerte en regla.</p>
+        <div class="warning-box">⚠️ <strong>Disclaimer fiscal importante:</strong> CryptoBolívar no es un asesor fiscal. La información aquí presentada es educativa y se basa en las normas publicadas hasta abril de 2026. Las leyes tributarias pueden cambiar. Siempre consulta con un contador especializado para tu caso particular.</div>
+        <h2>1. ¿Hay que pagar impuestos por tener criptomonedas en Venezuela?</h2>
+        <p>Actualmente, no existe un impuesto específico sobre la tenencia de criptomonedas. Sin embargo, el SENIAT ha establecido que las personas naturales y jurídicas deben incluir en su declaración anual del Impuesto sobre la Renta (ISLR) los activos digitales que posean, así como cualquier ingreso generado por su comercialización (compra/venta, minería, staking, etc.).</p>
+        <h2>2. ¿Qué debes declarar?</h2>
+        <ul><li><strong>Tenencias al 31 de diciembre:</strong> El valor en bolívares de tus criptomonedas (USDT, Bitcoin, Toncoin, etc.) debe ser convertido usando la tasa oficial del BCV de ese día.</li><li><strong>Ganancias ocasionales:</strong> Si vendiste criptomonedas durante el año y obtuviste una ganancia (diferencia entre el precio de compra y el de venta), esa ganancia podría estar sujeta al ISLR.</li><li><strong>Operaciones habituales:</strong> Si te dedicas al comercio de criptomonedas (trading, P2P, etc.) de forma profesional, deberás tributar como actividad comercial.</li></ul>
+        <div class="tip-box">💡 <strong>Consejo práctico:</strong> Guarda todos los comprobantes de tus operaciones (transferencias, capturas de pantalla de tus órdenes P2P, extractos de Binance). Te serán útiles si el SENIAT requiere justificar el origen de tus fondos.</div>
+        <h2>3. ¿Cómo calcular el valor en bolívares?</h2>
+        <p>El SENIAT ha indicado que se debe utilizar la <strong>tasa de cambio oficial del Banco Central de Venezuela (BCV)</strong> vigente al 31 de diciembre del año fiscal. Si tus criptomonedas no tienen un par directo con el bolívar, puedes usar su valor en dólares y luego aplicar la tasa BCV. Por ejemplo: 1 USDT = 1 USD → ese USD se convierte a bolívares según la tasa BCV.</p>
+        <h2>4. Recomendaciones para mantenerte en regla</h2>
+        <ul><li><strong>Lleva un registro de tus operaciones:</strong> Fecha, monto en cripto, valor en bolívares al momento de la transacción y beneficio o pérdida.</li><li><strong>Consulta a un contador especializado:</strong> Un profesional con experiencia en criptoactivos puede ayudarte a interpretar las normas y presentar tu declaración correctamente.</li><li><strong>No ignores la obligación de declarar:</strong> Aunque no pagues impuestos, la omisión de declarar tus tenencias podría generar sanciones.</li><li><strong>Mantente informado:</strong> Las normativas cambian. Revisa periódicamente el sitio del SENIAT o sigue a fuentes confiables.</li></ul>
+        <div class="danger-box">🚨 <strong>Consecuencias de no declarar:</strong> El SENIAT puede imponer multas, intereses e incluso iniciar procesos de determinación de oficio si detecta inconsistencias en tu patrimonio.</div>
+        <h2>5. Preguntas frecuentes</h2>
+        <ul><li><strong>¿Debo declarar si solo tengo USDT y no lo he vendido?</strong> Sí, debes declarar la tenencia como un activo, aunque no hayas generado ganancia.</li><li><strong>¿Qué pasa si opero con P2P y no tengo comprobantes?</strong> Es recomendable conservar las capturas de pantalla de las órdenes de Binance y los comprobantes de pago. Sin ellos, el SENIAT podría no aceptar tu justificación.</li><li><strong>¿Las criptomonedas pagan IVA?</strong> No, las transacciones con criptomonedas no están sujetas a IVA en Venezuela, salvo que se utilicen como medio de pago para bienes o servicios (entonces se causa el IVA del bien o servicio, no de la cripto).</li></ul>
+        <div class="tip-box">📌 <strong>Nota final:</strong> Esta guía es educativa. Para asesoría personalizada, acude a un contador especializado en criptoactivos. CryptoBolívar no se hace responsable por decisiones basadas únicamente en esta información.</div>
+        <a href="index.html" class="btn">← Volver al Inicio</a>
+    </div>
+</main>
+
+<script src="footer.js"></script>
+<script src="animations.js"></script>
+<script>
+    (function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            if (!btn || !sidebar || !overlay) return;
+            function openMenu() {
+                sidebar.style.right = '0px';
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                sidebar.style.right = '-280px';
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            btn.addEventListener('click', openMenu);
+            overlay.addEventListener('click', closeMenu);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && sidebar.style.right === '0px') closeMenu();
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && sidebar.style.right === '0px') closeMenu();
+            });
+        });
+    })();
+</script>
+</body>
+</html>

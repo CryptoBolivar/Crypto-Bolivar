@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Aviso Legal | CryptoBolívar</title>
+    <link rel="stylesheet" href="crypto-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+</head>
+<body>
+
+<header class="main-header">
+    <a href="index.html">
+        <img src="assets/img/logo-crypto.svg" alt="CryptoBolívar" class="logo-img">
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menú">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<script src="menu.js"></script>
+
+<main class="main-container">
+    <div class="info-card">
+        <h1>⚖️ Aviso Legal</h1>
+        <p><strong>CryptoBolívar</strong> es un portal educativo independiente. No somos una plataforma de intercambio, un banco, ni un asesor financiero registrado.</p>
+        <h2>1. Contenido educativo, no asesoría</h2>
+        <p>La información publicada en este sitio tiene fines exclusivamente educativos y referenciales. No constituye asesoría financiera, legal ni fiscal. Cada usuario es responsable de sus propias decisiones de compra, venta, ahorro o inversión en criptomonedas.</p>
+        <h2>2. Riesgos asociados</h2>
+        <p>Las criptomonedas, incluyendo USDT y otras stablecoins, conllevan riesgos como volatilidad (aunque USDT sea estable), pérdida de claves privadas, estafas, problemas de liquidez, cambios regulatorios y fallos técnicos en las plataformas. CryptoBolívar no se hace responsable por pérdidas derivadas del uso de la información aquí proporcionada, dentro del marco legal aplicable.</p>
+        <h2>3. Enlaces externos</h2>
+        <p>Este portal puede contener enlaces a sitios externos como Binance, billeteras u otras plataformas. CryptoBolívar no controla ni respalda el contenido, políticas de privacidad o prácticas de seguridad de dichos sitios. El usuario accede bajo su propia responsabilidad.</p>
+        <h2>4. Propiedad intelectual</h2>
+        <p>El nombre "CryptoBolívar", su logotipo, el diseño de las guías y el contenido original son propiedad del portal. Queda prohibida la reproducción total o parcial sin autorización expresa, salvo para uso personal o educativo citando la fuente.</p>
+        <h2>5. Actualizaciones</h2>
+        <p>Este aviso legal puede ser modificado sin previo aviso. La versión vigente es la publicada en esta página. Te recomendamos revisarla periódicamente.</p>
+        <p><strong>Última actualización:</strong> Abril 2026</p>
+        <p style="margin-top: 20px;">Consulta nuestra <a href="privacidad.html">Política de Privacidad</a> para saber cómo tratamos tus datos.</p>
+        <a href="index.html" class="btn" style="margin-top: 20px;">← Volver al Inicio</a>
+    </div>
+</main>
+
+<script src="footer.js"></script>
+<script src="animations.js"></script>
+<script>
+    (function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            const btn = document.getElementById('hamburgerBtn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            if (!btn || !sidebar || !overlay) return;
+            function openMenu() {
+                sidebar.style.right = '0px';
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeMenu() {
+                sidebar.style.right = '-280px';
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            btn.addEventListener('click', openMenu);
+            overlay.addEventListener('click', closeMenu);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && sidebar.style.right === '0px') closeMenu();
+            });
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && sidebar.style.right === '0px') closeMenu();
+            });
+        });
+    })();
+</script>
+</body>
+</html>

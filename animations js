@@ -1,0 +1,42 @@
+// animations.js - Animaciones globales (barra de progreso, fade, tarjetas)
+(function() {
+    // Barra de progreso
+    const progressBar = document.createElement('div');
+    progressBar.id = 'progress-bar';
+    document.body.prepend(progressBar);
+    window.addEventListener('scroll', () => {
+        const winScroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        if (progressBar) progressBar.style.width = scrolled + '%';
+    });
+
+    // Transición fade entre páginas (solo enlaces internos)
+    document.addEventListener('DOMContentLoaded', function() {
+        const internalLinks = document.querySelectorAll('a[href^="index.html"], a[href^="manual-usdt.html"], a[href^="p2p-binance.html"], a[href^="seguridad.html"], a[href^="glosario.html"], a[href^="faq.html"], a[href^="aviso-legal.html"], a[href^="privacidad.html"], a[href^="contacto.html"], a[href^="binance-pay.html"], a[href^="retiros-p2p-banco.html"], a[href^="impuestos-cripto-venezuela.html"], a[href^="mejores-wallets-venezuela.html"], a[href^="compras-internacionales-cripto.html"], a[href^="seguridad-binance-telegram.html"], a[href^="estafas-p2p-telegram.html"], a[href^="historia-btc-ton-usdt.html"], a[href^="telegram-wallet-guia.html"], a[href^="toncoin-guia.html"], a[href^="datos-curiosos-cripto.html"]');
+        internalLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 200);
+            });
+        });
+        window.addEventListener('load', () => {
+            document.body.classList.remove('fade-out');
+        });
+    });
+
+    // Animación escalonada de tarjetas (si existen)
+    const cards = document.querySelectorAll('.grid-container .card');
+    if (cards.length) {
+        cards.forEach((card, index) => {
+            card.style.animation = `fadeUp 0.4s ease-out forwards`;
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.animationDelay = `${0.1 * (index + 1)}s`;
+        });
+    }
+})();
