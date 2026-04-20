@@ -1,19 +1,10 @@
-// footer.js - Footer legal + espacio para anuncio + banner de cookies
+// footer.js - Footer legal + banner dinámico + cookies
 (function() {
     const footerHTML = `
         <footer>
             <div class="ad-container ad-footer">
                 <div class="ad-label">Publicidad</div>
-                <script>
-                    atOptions = {
-                        'key' : 'a4c8774439db2ef8a9956132c412a1ea',
-                        'format' : 'iframe',
-                        'height' : 60,
-                        'width' : 468,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/a4c8774439db2ef8a9956132c412a1ea/invoke.js"></script>
+                <div id="adsterra-footer"></div>
             </div>
             <p><strong>CryptoBolívar</strong> | Tu guía en el mundo Crypto</p>
             <p style="font-size:0.7rem; margin-top:10px;">
@@ -26,16 +17,40 @@
             </p>
         </footer>
     `;
+
     document.addEventListener('DOMContentLoaded', function() {
+        // Inyectar footer
         const existingFooter = document.querySelector('footer');
         if (existingFooter) {
             existingFooter.outerHTML = footerHTML;
         } else {
             document.body.insertAdjacentHTML('beforeend', footerHTML);
         }
+
+        // Cargar dinámicamente el script de Adsterra para el footer
+        const adContainer = document.getElementById('adsterra-footer');
+        if (adContainer) {
+            // Script de configuración
+            const configScript = document.createElement('script');
+            configScript.textContent = `
+                atOptions = {
+                    'key' : 'a4c8774439db2ef8a9956132c412a1ea',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {}
+                };
+            `;
+            adContainer.appendChild(configScript);
+
+            // Script de invocación
+            const invokeScript = document.createElement('script');
+            invokeScript.src = 'https://www.highperformanceformat.com/a4c8774439db2ef8a9956132c412a1ea/invoke.js';
+            adContainer.appendChild(invokeScript);
+        }
     });
 
-    // Banner de cookies (consentimiento)
+    // Banner de cookies (sin cambios)
     if (!localStorage.getItem('cookiesAccepted')) {
         const bannerHTML = `
             <div id="cookie-banner">
