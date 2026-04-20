@@ -4,9 +4,16 @@
         <footer>
             <div class="ad-container ad-footer">
                 <div class="ad-label">Publicidad</div>
-                <div style="min-height: 90px; background: #2A2D35; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #888; margin-bottom: 20px;">
-                    [Espacio para banner 468x60 - Adsterra]
-                </div>
+                <script>
+                    atOptions = {
+                        'key' : 'a4c8774439db2ef8a9956132c412a1ea',
+                        'format' : 'iframe',
+                        'height' : 60,
+                        'width' : 468,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/a4c8774439db2ef8a9956132c412a1ea/invoke.js"></script>
             </div>
             <p><strong>CryptoBolívar</strong> | Tu guía en el mundo Crypto</p>
             <p style="font-size:0.7rem; margin-top:10px;">
