@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concepto Academy - CryptoBolívar</title>
+    <link rel="stylesheet" href="crypto-theme.css">
+    <style>
+        .academy-container { max-width: 800px; margin: 40px auto; padding: 20px; }
+        .step-block { display: flex; align-items: flex-start; margin-bottom: 60px; position: relative; }
+        .step-block:not(:last-child)::after {
+            content: ''; position: absolute; left: 25px; top: 60px; width: 2px;
+            height: calc(100% - 20px); background: #F3BA2F; z-index: 1; opacity: 0.3;
+        }
+        .step-number {
+            width: 50px; height: 50px; background-color: #F3BA2F; color: #0B0E11;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 800; margin-right: 30px; flex-shrink: 0; z-index: 2;
+        }
+        .step-content {
+            background: rgba(30, 32, 35, 0.8); padding: 25px; border-radius: 15px;
+            border: 1px solid rgba(243, 186, 47, 0.2); width: 100%;
+        }
+        .step-content h3 { color: #F3BA2F; margin-top: 0; }
+        .academy-badge {
+            background: rgba(243, 186, 47, 0.1); color: #F3BA2F; padding: 5px 15px;
+            border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-block; margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body class="bg-carbon text-white">
+    <div class="academy-container">
+        <header style="text-align: center; margin-bottom: 60px;">
+            <span class="academy-badge">NUEVO FORMATO</span>
+            <h1 style="font-size: 2rem;">Compra <span style="color: #F3BA2F;">USDT/BTC</span></h1>
+            <p style="color: #848E9C;">Guía rápida paso a paso</p>
+        </header>
+
+        <div class="step-block">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3>Configura Pago</h3>
+                <p>Vincula tu cuenta bancaria nacional en Binance para recibir o enviar bolívares de forma segura.</p>
+                <div style="margin-top:15px; text-align:center;">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="5" width="18" height="14" rx="2" stroke="#F3BA2F" stroke-width="2"/>
+                        <path d="M3 10H21" stroke="#F3BA2F" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="step-block">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>Busca en P2P</h3>
+                <p>Filtra por moneda 'VES', selecciona 'Comprar' y elige un comerciante con más del 95% de éxito.</p>
+                <div style="margin-top:15px; text-align:center;">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="#F3BA2F" stroke-width="2"/>
+                        <path d="M12 7V12L15 15" stroke="#FFFFFF" stroke-width="2"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="step-block">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>Transfiere y Recibe</h3>
+                <p>Realiza la transferencia bancaria y marca como 'Pagado'. Tus criptos serán liberadas en minutos.</p>
+                <div style="margin-top:15px; text-align:center;">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="#F3BA2F" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="#F3BA2F" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
